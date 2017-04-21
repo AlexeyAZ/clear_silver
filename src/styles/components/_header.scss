@@ -1,0 +1,35 @@
+.header {
+    margin-bottom: 50px;
+	
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__logo-img {
+
+        @include media(w768) {
+            
+        }
+    }
+
+    &__item {
+        width: calc(100% / 3);
+
+        &_logo {
+            text-align: center;
+        }
+
+        &_contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__link {
+        color: black;
+    }
+}

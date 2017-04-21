@@ -1,0 +1,23 @@
+.sec3 {
+    background-image: url("../img/sec3-bg.jpg");
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 50%;
+    }
+}

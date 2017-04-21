@@ -1,0 +1,38 @@
+.sec2 {
+    overflow: hidden;
+    
+    &__border {
+        margin-left: 14%;
+        padding: 100px 50px 200px 20%;
+        min-width: 100%;
+    }
+
+    &__border-inner {
+        padding-left: 10%;
+    }
+
+    &__note {
+        transform: translateY(-50%);
+        background-color: $main-blue;
+        margin-left: 8%;
+        padding: 30px 30px 30px 33%;
+        min-width: 100%;
+    }
+
+    &__img {
+        position: absolute;
+        right: 58%;
+        bottom: 0;
+    }
+
+    &__decor-text {
+        font-size: 414px;
+        background-image: linear-gradient(to bottom, #c7c7c7, white);
+        -webkit-background-clip: text;
+        color: white;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        left: 7%;
+        bottom: -150px;
+    }
+}

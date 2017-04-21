@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0.5em;
+}
+
+.text {
+
+    &_xs {
+        font-size: 24px;
+
+        @include media(w1024) {
+            
+        }
+    }
+
+    &_s {
+        font-size: 29px;
+    }
+
+    &_m {
+        font-size: 30px;
+    }
+    
+    &_l {
+        font-size: 41px;
+    }
+    
+    &_xl {
+        font-size: 62px;
+    }
+    
+    &_xxl {
+        font-size: 75px;
+    }
+
+    
+    &_x {
+        font-size: 60px;
+    }
+}
+
+h2 {
+    font-family: "Gilroy", sans-serif;
+    font-size: 62px;
+    font-weight: bold;
+}
