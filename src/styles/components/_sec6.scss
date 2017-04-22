@@ -1,0 +1,60 @@
+.sec6 {
+	overflow: hidden;
+
+	&__top {
+		background-image: url("../img/sec6-bg.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding-top: 60px;
+	}
+
+	&__img-block {
+		display: flex;
+		margin-bottom: 350px;
+		padding-top: 100px;
+		padding-bottom: 120px;
+	}
+
+	&__img-block-item {
+		position: relative;
+		width: 50%;
+	}
+
+	&__img-block-img {
+		position: absolute;
+		top: -100px;
+		left: 0;
+	}
+
+	&__bottom {
+		padding-bottom: 100px;
+		position: relative;
+	}
+
+	&__border {
+		padding: 0 0 100px 10%;
+	}
+
+	&__border-fact {
+		transform: translateY(-50%);
+		background-color: $main-blue;
+		padding: 30px 30% 30px 30px;
+	}
+
+	&__border-text {
+		padding-right: 40%;
+	}
+
+	&__border-btn {
+		transform: translateY(50%);
+		position: absolute;
+		bottom: 0;
+	}
+
+	&__bottom-img {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+	}
+}
