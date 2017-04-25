@@ -4,7 +4,11 @@ $(function () {
         var listItem = $(".sec3__list-item");
         var listItemWidth = listItem.width();
 
-        $(".sec3__list-item").height(listItemWidth);
+        if (window.matchMedia("(max-width:768px)").matches) {
+            $(".sec3__list-item").height("auto");
+        } else {
+            $(".sec3__list-item").height(listItemWidth);
+        }
     };
 
     setListItemHeight();

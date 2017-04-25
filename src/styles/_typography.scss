@@ -26,10 +26,22 @@ h1, h2, h3, h4, h5, h6, p {
 
     &_m {
         font-size: 33px;
+
+        @include media(w1024) {
+            font-size: 25px;
+        }
     }
     
     &_l {
         font-size: 41px;
+
+        @include media(w1024) {
+            font-size: 25px;
+        }
+
+        @include media(w768) {
+            font-size: 20px;
+        }
     }
     
     &_xl {
@@ -61,5 +73,13 @@ h2 {
 
     @include media(w1280) {
         font-size: 50px;
+    }
+
+    @include media(w1024) {
+        font-size: 41px;
+    }
+
+    @include media(w768) {
+        font-size: 25px;
     }
 }

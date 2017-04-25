@@ -2,6 +2,14 @@
 	background-image: url("../img/sec4-bg.jpg");
 	padding-top: 100px;
 
+	@include media(w1024) {
+		padding-top: 60px;
+	}
+
+	@include media(w768) {
+		padding-top: 30px;
+	}
+
 	&__decor {
 		display: block;
 		margin-left: auto;
@@ -12,12 +20,26 @@
 		color: white;
 		margin: 0 auto 100px;
 		width: 80%;
+
+		@include media(w1024) {
+			//margin-bottom: 60px;
+			width: 100%;
+		}
 	}
 
 	&__list-item {
 		margin-bottom: 50px;
 		padding-left: 120px;
 		position: relative;
+
+		@include media(w1024) {
+			margin-bottom: 30px;
+		}
+
+		@include media(w768) {
+			text-align: center;
+			padding-left: 0;
+		}
 	}
     
 	&__list-number {
@@ -26,6 +48,10 @@
 		font-weight: bold;
 		position: absolute;
 		left: 0;
+
+		@include media(w768) {
+			position: static;
+		}
 	}
 
 	&__list-text {
@@ -38,11 +64,22 @@
 		padding: 60px 60px 60px 30%;
 		position: relative;
 		z-index: 2;
+
+		@include media(w1024) {
+			text-align: center;
+			padding: 0 20px 40px;
+		}
 	}
 
 	&__form-img {
 		position: absolute;
 		top: 20px;
 		left: -100px;
+
+		@include media(w1024) {
+			margin-top: -60px;
+			position: static;
+			max-width: 240px;
+		}
 	}
 }

@@ -1,13 +1,16 @@
 .sec1 {
     background-image: url("../img/sec1-bg.jpg");
+    background-position: center -10px;
     margin-bottom: 60px;
     padding-bottom: 200px;
 
     @include media(w1024) {
+        margin-bottom: 30px;
         padding-bottom: 100px;
     }
 
     @include media(w768) {
+        margin-bottom: 10px;
         padding-bottom: 30px;
     }
 

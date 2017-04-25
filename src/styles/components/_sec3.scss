@@ -9,17 +9,57 @@
         margin-bottom: 60px;
         padding-top: 100px;
         padding-bottom: 100px;
+
+        @include media(w1024) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        @include media(w768) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 60px;
+
+        @include media(w1024) {
+            margin: 0 auto 40px;
+        }
+
+        @include media(w768) {
+            margin: 0 auto 30px;
+            width: 100%;
+        }
     }
 
     &__list-row {
         display: flex;
         width: 100%;
+
+        @include media(w768) {
+            flex-direction: column;
+        }
+
+        &:nth-child(2) {
+
+            .sec3__list-item {
+
+                @include media(w768) {
+                    order: 2;
+                }
+            }
+
+            .sec3__list-item_img {
+
+                @include media(w768) {
+                    order: 1;
+                }
+            }
+        }
     }
 
     &__list-item {
@@ -33,22 +73,88 @@
         justify-content: center;
         padding: 20px;
         width: 50%;
+
+        &_img {
+
+            @include media(w768) {
+                padding: 0;
+            }
+        }
+
+        @include media(w768) {
+            background-image: none !important;
+            width: 100%;
+        }
+    }
+
+    &__list-img {
+        display: none;
+
+        @include media(w768) {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__list-icon {
+
+        @include media(w1024) {
+            max-height: 80px;
+        }
+
+        @include media(w768) {
+            max-width: 60px;
+        }
     }
 
     &__achievments {
         display: flex;
         margin-bottom: 60px;
+
+        @include media(w1024) {
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        @include media(w768) {
+            margin-bottom: 30px;
+        }
     }
 
     &__achievments-item {
         width: 33%;
 
+        @include media(w1024) {
+            width: 50%;
+        }
+
+        @include media(w768) {
+            width: 100%;
+        }
+
         &:first-child {
             text-align: left;
+
+            @include media(w1024) {
+                text-align: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        &:nth-child(2) {
+
+            @include media(w1024) {
+                text-align: center;
+            }
         }
 
         &:last-child {
             text-align: right;
+
+            @include media(w1024) {
+                text-align: center;
+                width: 100%;
+            }
         }
     }
 
@@ -66,21 +172,76 @@
         font-weight: bold;
         margin-bottom: 20px;
         padding-bottom: 10px;
+
+        @include media(w1280) {
+            font-size: 75px;
+        }
+
+        @include media(w768) {
+            font-size: 58px;
+        }
     }
 
     &__bottom {
         padding-bottom: 100px;
     }
 
+    &__bottom-text-pc {
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__bottom-text-mobile {
+        display: none;
+        text-align: center;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
     &__border {
         padding: 60px 40% 60px 60px;
         right: 10%;
         min-width: 100%;
+
+        @include media(w1366) {
+            right: 0;
+            min-width: 0;
+            width: 100%;
+        }
+
+        @include media(w768) {
+            text-align: center;
+            padding: 0 10px 0;
+        }
+    }
+
+    &__bottom-btn {
+        position: relative;
+
+        @include media(w768) {
+            transform: translateY(-30px);
+        }
     }
 
     &__border-img {
         position: absolute;
         bottom: -46px;
-        right: -340px;
+        right: -140px;
+
+        @include media(w1024) {
+            max-width: 400px;
+        }
+
+        @include media(w768) {
+            transform: translateY(40px);
+            display: block;
+            margin: 0 auto;
+            position: static;
+            width: 80%;
+        }
     }
 }
