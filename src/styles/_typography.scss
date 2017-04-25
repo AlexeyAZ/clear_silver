@@ -8,12 +8,20 @@ h1, h2, h3, h4, h5, h6, p {
         font-size: 24px;
 
         @include media(w1024) {
-            
+            font-size: 16px;
         }
     }
 
     &_s {
         font-size: 29px;
+
+        @include media(w1024) {
+            font-size: 25px;
+        }
+
+        @include media(w768) {
+            font-size: 16px;
+        }
     }
 
     &_m {
@@ -30,6 +38,14 @@ h1, h2, h3, h4, h5, h6, p {
     
     &_xxl {
         font-size: 75px;
+
+        @include media(w1024) {
+            font-size: 41px;
+        }
+
+        @include media(w768) {
+            font-size: 25px;
+        }
     }
 
     
@@ -42,4 +58,8 @@ h2 {
     font-family: "Gilroy", sans-serif;
     font-size: 62px;
     font-weight: bold;
+
+    @include media(w1280) {
+        font-size: 50px;
+    }
 }

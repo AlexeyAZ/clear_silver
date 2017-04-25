@@ -59,9 +59,18 @@ h1, h2, h3, h4, h5, h6, p {
 
 .text_xs {
   font-size: 24px; }
+  @media only screen and (max-width: 1024px) {
+    .text_xs {
+      font-size: 16px; } }
 
 .text_s {
   font-size: 29px; }
+  @media only screen and (max-width: 1024px) {
+    .text_s {
+      font-size: 25px; } }
+  @media only screen and (max-width: 768px) {
+    .text_s {
+      font-size: 16px; } }
 
 .text_m {
   font-size: 33px; }
@@ -74,6 +83,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .text_xxl {
   font-size: 75px; }
+  @media only screen and (max-width: 1024px) {
+    .text_xxl {
+      font-size: 41px; } }
+  @media only screen and (max-width: 768px) {
+    .text_xxl {
+      font-size: 25px; } }
 
 .text_x {
   font-size: 60px; }
@@ -82,6 +97,9 @@ h2 {
   font-family: "Gilroy", sans-serif;
   font-size: 62px;
   font-weight: bold; }
+  @media only screen and (max-width: 1280px) {
+    h2 {
+      font-size: 50px; } }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2463,10 +2481,12 @@ a.btn-round {
       height: 64px; } }
   @media only screen and (max-width: 768px) {
     .btn-round {
-      border-radius: 25px;
-      font-size: 15px;
-      padding: 0 20px;
-      height: 50px; } }
+      border-radius: 30px;
+      -ms-flex-pack: center;
+          justify-content: center;
+      padding: 15px 10px;
+      height: auto;
+      width: 100%; } }
   .btn-round_white {
     background-color: white;
     color: black; }
@@ -2487,11 +2507,6 @@ a.btn-round {
       @media only screen and (max-width: 768px) {
         .btn-round_download:after {
           content: none; } }
-    @media only screen and (max-width: 768px) {
-      .btn-round_download {
-        background-position: right 10px center;
-        background-size: 30px;
-        padding-right: 50px; } }
   .btn-round_download-column {
     margin-bottom: 50px; }
     .btn-round_download-column:after {
@@ -2730,10 +2745,7 @@ a.btn-round {
   @media only screen and (max-width: 1024px) {
     .phone {
       background-size: contain;
-      font-size: 18px; } }
-  @media only screen and (max-width: 768px) {
-    .phone {
-      font-size: 15px; } }
+      font-size: 25px; } }
 
 a {
   display: inline-block;
@@ -2746,10 +2758,7 @@ a {
     font-size: 19px; }
     @media only screen and (max-width: 1024px) {
       .link_getcall {
-        font-size: 15px; } }
-    @media only screen and (max-width: 768px) {
-      .link_getcall {
-        font-size: 10px; } }
+        font-size: 16px; } }
 
 .thanks {
   background-image: url("../img/sec1-bg.jpg");
@@ -2858,6 +2867,9 @@ a {
 
 .header {
   margin-bottom: 50px; }
+  @media only screen and (max-width: 768px) {
+    .header {
+      padding-top: 30px; } }
   .header__container {
     display: -ms-flexbox;
     display: flex;
@@ -2866,10 +2878,24 @@ a {
     -ms-flex-align: center;
         align-items: center;
     width: 100%; }
+    @media only screen and (max-width: 768px) {
+      .header__container {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
   .header__item {
     width: calc(100% / 3); }
+    @media only screen and (max-width: 768px) {
+      .header__item {
+        width: 100%; } }
+    @media only screen and (max-width: 768px) {
+      .header__item_descr {
+        text-align: center;
+        margin-bottom: 30px; } }
     .header__item_logo {
       text-align: center; }
+      @media only screen and (max-width: 768px) {
+        .header__item_logo {
+          margin-bottom: 30px; } }
     .header__item_contacts {
       display: -ms-flexbox;
       display: flex;
@@ -2877,6 +2903,10 @@ a {
           flex-direction: column;
       -ms-flex-align: end;
           align-items: flex-end; }
+      @media only screen and (max-width: 768px) {
+        .header__item_contacts {
+          -ms-flex-align: center;
+              align-items: center; } }
   .header__link {
     color: black; }
 
@@ -2988,6 +3018,12 @@ a {
   background-image: url("../img/sec1-bg.jpg");
   margin-bottom: 60px;
   padding-bottom: 200px; }
+  @media only screen and (max-width: 1024px) {
+    .sec1 {
+      padding-bottom: 100px; } }
+  @media only screen and (max-width: 768px) {
+    .sec1 {
+      padding-bottom: 30px; } }
   .sec1__border {
     border: 4px solid white;
     border-bottom: none;
@@ -3002,6 +3038,12 @@ a {
       bottom: 0;
       height: 4px;
       width: 200px; }
+      @media only screen and (max-width: 1024px) {
+        .sec1__border:before, .sec1__border:after {
+          width: 120px; } }
+      @media only screen and (max-width: 768px) {
+        .sec1__border:before, .sec1__border:after {
+          width: 100%; } }
     .sec1__border:before {
       box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
       left: 0; }
@@ -3014,8 +3056,17 @@ a {
         margin-right: -20px; } }
     @media only screen and (max-width: 1024px) {
       .sec1__border {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px; } }
+    @media only screen and (max-width: 768px) {
+      .sec1__border {
+        border-left: none;
+        border-right: none;
         margin-left: -18px;
-        margin-right: -18px; } }
+        margin-right: -18px;
+        margin-bottom: 30px;
+        padding: 10px 0; } }
   .sec1__inner-border {
     border: 6px solid white;
     border-bottom: none;
@@ -3029,12 +3080,26 @@ a {
       bottom: 0;
       height: 6px;
       width: calc(200px - 16px); }
+      @media only screen and (max-width: 1024px) {
+        .sec1__inner-border:before, .sec1__inner-border:after {
+          width: calc(120px - 16px); } }
+      @media only screen and (max-width: 768px) {
+        .sec1__inner-border:before, .sec1__inner-border:after {
+          width: 100%; } }
     .sec1__inner-border:before {
       box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
       left: 0; }
     .sec1__inner-border:after {
       box-shadow: -2px 0 6px rgba(0, 0, 0, 0.3);
       right: 0; }
+    @media only screen and (max-width: 1024px) {
+      .sec1__inner-border {
+        padding: 30px 20px; } }
+    @media only screen and (max-width: 768px) {
+      .sec1__inner-border {
+        border-left: none;
+        border-right: none;
+        padding: 20px 10px 30px; } }
   .sec1__decor-text {
     font-family: "RosaMarena", sans-serif;
     font-size: 74px;
@@ -3045,6 +3110,13 @@ a {
     @media only screen and (max-width: 1280px) {
       .sec1__decor-text {
         font-size: 54px; } }
+    @media only screen and (max-width: 1024px) {
+      .sec1__decor-text {
+        font-size: 41px; } }
+    @media only screen and (max-width: 768px) {
+      .sec1__decor-text {
+        font-size: 25px;
+        position: static; } }
 
 .sec2 {
   overflow: hidden; }
@@ -3052,6 +3124,13 @@ a {
     margin-left: 14%;
     padding: 100px 50px 200px 20%;
     min-width: 100%; }
+    @media only screen and (max-width: 1500px) {
+      .sec2__border {
+        padding: 50px 20px 100px 20%;
+        min-width: 0; } }
+    @media only screen and (max-width: 1024px) {
+      .sec2__border {
+        padding: 30px 20px 100px 12%; } }
   .sec2__border-inner {
     padding-left: 10%; }
   .sec2__note {
@@ -3061,10 +3140,28 @@ a {
     margin-left: 8%;
     padding: 30px 30px 30px 33%;
     min-width: 100%; }
+    @media only screen and (max-width: 1500px) {
+      .sec2__note {
+        margin-left: 6%;
+        padding: 30px 30px 30px 35%;
+        min-width: 0;
+        width: 90%; } }
+    @media only screen and (max-width: 1280px) {
+      .sec2__note {
+        padding: 30px 8% 30px 35%; } }
+    @media only screen and (max-width: 1024px) {
+      .sec2__note {
+        padding: 30px 8% 30px 28%; } }
   .sec2__img {
     position: absolute;
     right: 58%;
-    bottom: 0; }
+    bottom: 0;
+    height: 100%; }
+    @media only screen and (max-width: 1024px) {
+      .sec2__img {
+        right: 63%;
+        height: auto;
+        max-width: 700px; } }
   .sec2__decor-text {
     font-size: 414px;
     background-image: linear-gradient(to bottom, #c7c7c7, white);
@@ -3074,6 +3171,21 @@ a {
     position: absolute;
     left: 7%;
     bottom: -150px; }
+    @media only screen and (max-width: 1700px) {
+      .sec2__decor-text {
+        font-size: 320px;
+        bottom: -130px;
+        left: 0; } }
+    @media only screen and (max-width: 1280px) {
+      .sec2__decor-text {
+        font-size: 300px;
+        bottom: -130px;
+        left: -50px; } }
+    @media only screen and (max-width: 1024px) {
+      .sec2__decor-text {
+        right: 63%;
+        height: auto;
+        max-width: 700px; } }
 
 .sec3 {
   overflow: hidden; }

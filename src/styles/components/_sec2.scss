@@ -5,6 +5,15 @@
         margin-left: 14%;
         padding: 100px 50px 200px 20%;
         min-width: 100%;
+
+        @include media(w1500) {
+            padding: 50px 20px 100px 20%;
+            min-width: 0;
+        }
+
+        @include media(w1024) {
+            padding: 30px 20px 100px 12%;
+        }
     }
 
     &__border-inner {
@@ -17,12 +26,34 @@
         margin-left: 8%;
         padding: 30px 30px 30px 33%;
         min-width: 100%;
+
+        @include media(w1500) {
+            margin-left: 6%;
+            padding: 30px 30px 30px 35%;
+            min-width: 0;
+            width: 90%;
+        }
+
+        @include media(w1280) {
+            padding: 30px 8% 30px 35%;
+        }
+
+        @include media(w1024) {
+            padding: 30px 8% 30px 28%;
+        }
     }
 
     &__img {
         position: absolute;
         right: 58%;
         bottom: 0;
+        height: 100%;
+
+        @include media(w1024) {
+            right: 63%;
+            height: auto;
+            max-width: 700px;
+        }
     }
 
     &__decor-text {
@@ -34,5 +65,23 @@
         position: absolute;
         left: 7%;
         bottom: -150px;
+
+        @include media(w1700) {
+            font-size: 320px;
+            bottom: -130px;
+            left: 0;
+        }
+
+        @include media(w1280) {
+            font-size: 300px;
+            bottom: -130px;
+            left: -50px;
+        }
+
+        @include media(w1024) {
+            right: 63%;
+            height: auto;
+            max-width: 700px;
+        }
     }
 }
