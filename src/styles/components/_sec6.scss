@@ -14,17 +14,83 @@
 		margin-bottom: 350px;
 		padding-top: 100px;
 		padding-bottom: 120px;
+
+		@include media(w1024) {
+            flex-direction: column;
+			margin-bottom: 200px;
+			padding-top: 0;
+			padding-bottom: 300px;
+        }
+
+		@include media(w768) {
+			margin-bottom: 40px;
+			padding-bottom: 0;
+		}
 	}
 
 	&__img-block-item {
 		position: relative;
 		width: 50%;
+
+		@include media(w1024) {
+			text-align: center;
+            width: 100%;
+        }
+
+		&:last-child {
+			padding-left: 20px;
+
+			@include media(w1024) {
+				order: -10;
+				margin-bottom: 30px;
+				padding-left: 0;
+			}
+		}
 	}
 
 	&__img-block-img {
 		position: absolute;
 		top: -100px;
 		left: 0;
+		width: 100%;
+
+		@include media(w1024) {
+			transform: translateX(-50%);
+			//position: static;
+			top: auto;
+			left: 50%;
+			width: auto;
+		}
+
+		@include media(w768) {
+			transform: translateX(0);
+			position: static;
+			width: 100%;
+		}
+
+		&_pc {
+
+			@include media(w1024) {
+				display: none;
+			}
+
+			@include media(w768) {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&_mobile {
+			display: none;
+
+			@include media(w1024) {
+				display: inline;
+			}
+
+			@include media(w768) {
+				display: none;
+			}
+		}
 	}
 
 	&__bottom {
@@ -34,27 +100,62 @@
 
 	&__border {
 		padding: 0 0 100px 10%;
+
+		@include media(w768) {
+			text-align: center;
+			padding: 0;
+			border: none;
+		}
 	}
 
 	&__border-fact {
 		transform: translateY(-50%);
 		background-color: $main-blue;
 		padding: 30px 30% 30px 30px;
+
+		@include media(w768) {
+			transform: translateY(0);
+			margin-bottom: 30px;
+			margin-left: -18px;
+			margin-right: -18px;
+			padding: 30px 18px;
+		}
 	}
 
 	&__border-text {
 		padding-right: 40%;
+
+		@include media(w768) {
+			margin-bottom: 30px;
+			padding-right: 0;
+		}
 	}
 
 	&__border-btn {
 		transform: translateY(50%);
 		position: absolute;
 		bottom: 0;
+
+		@include media(w768) {
+			transform: translateY(0);
+			position: static;
+		}
 	}
 
 	&__bottom-img {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
+
+		@include media(w1024) {
+			left: 55%;
+			bottom: -60px;
+			max-width: 600px;
+		}
+
+		@include media(w768) {
+			position: static;
+			width: 100%;
+		}
 	}
 }

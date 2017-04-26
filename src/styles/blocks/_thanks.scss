@@ -1,10 +1,26 @@
 .thanks {
-    background-image: url("../img/sec1-bg.jpg");
+    background-image: url("../img/thanks-bg.jpg");
     padding-top: 30px;
-    padding-bottom: 160px;
+    padding-bottom: 80px;
 
     @include media(w1024) {
-        padding-bottom: 200px;
+        padding-bottom: 60px;
+    }
+
+    @include media(w768) {
+        padding-bottom: 30px;
+    }
+
+    &__border.thanks__border {
+        margin-bottom: 150px;
+
+        @include media(w1024) {
+            margin-bottom: 100px;
+        }
+
+        @include media(w768) {
+            margin-bottom: 40px;
+        }
     }
 
     &__heading {
@@ -36,6 +52,15 @@
         }
     }
 
+    &__decor {
+        transform: translateY(40%);
+        bottom: 0;
+
+        @include media(w768) {
+            transform: translateY(0);
+        }
+    }
+
     &__subtitle {
         font-size: 38px;
         margin-bottom: 1em;
@@ -53,11 +78,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         margin: 0 auto 30px;
         width: 100%;
 
         @include media(w768) {
-            flex-direction: column;
+            
         }
     }
 
@@ -75,5 +101,10 @@
 
     &__btn {
         justify-content: center;
+    }
+
+    &__links-link {
+        color: black;
+        text-decoration: underline;
     }
 }

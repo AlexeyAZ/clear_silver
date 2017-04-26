@@ -2,6 +2,14 @@
     border: 6px solid #d7d7d7;
     margin-bottom: 100px;
     padding: 60px 10px 0;
+
+    @include media (w1024) {
+        margin-bottom: 50px;
+    }
+
+    @include media (w768) {
+        padding-top: 30px;
+    }
 }
 .bottom-form {
     display: flex;
@@ -10,9 +18,10 @@
     padding-bottom: 80px;
     position: relative;
     
-    @include media (w768) {
+    @include media (w1024) {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 50px;
     }
 
     &__label {
@@ -20,11 +29,13 @@
         padding: 0 10px;
         width: calc(100% / 3);
 
-        @include media (w768) {
-            width: 90%;
+        @include media (w1024) {
+            margin-bottom: 20px;
+            padding: 0;
+            width: 50%;
         }
 
-        @include media (w500) {
+        @include media (w768) {
             width: 100%;
         }
     }
@@ -35,10 +46,6 @@
         bottom: 0;
 
         @include media (w768) {
-            width: 90%;
-        }
-
-        @include media (w500) {
             width: 100%;
         }
     }

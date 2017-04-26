@@ -9,6 +9,7 @@
 	z-index: 1;
 
 	@include media(w1024) {
+		background-image: none;
 		padding-top: 150px;
 		padding-bottom: 60px;
 	}
@@ -69,5 +70,9 @@
 		position: absolute;
 		left: 10%;
 		bottom: -60px;
+
+		@include media(w1024) {
+			display: none;
+		}
 	}
 }

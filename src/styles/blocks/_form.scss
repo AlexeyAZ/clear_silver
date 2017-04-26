@@ -161,6 +161,7 @@ $form-input-padding: 25px;
                 white-space: nowrap;
 
                 @include media(w768) {
+                    content: none;
                     font-size: 16px;
                     left: calc(100% + 20px);
                 }

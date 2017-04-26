@@ -13,7 +13,7 @@
         justify-content: space-between;
         align-items: flex-start;
 
-        @include media(w600) {
+        @include media(w768) {
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -25,7 +25,7 @@
         &_copy {
             margin-bottom: 25px;
 
-            @include media(w600) {
+            @include media(w768) {
                 margin-bottom: 15px;
             }
         }
@@ -34,6 +34,14 @@
     
     &__block {
         display: flex;
+
+        @include media(w1024) {
+            width: 50%;
+        }
+
+        @include media(w768) {
+            width: 100%;
+        }
 
         &_social {
             flex-direction: column;
@@ -48,17 +56,37 @@
             }
         }
 
+        &_about-pc {
+
+            @include media(w1024) {
+                display: none;
+            }
+        }
+
         &_contacts {
             flex-direction: column;
             align-items: flex-end;
 
-            @include media(w600) {
+            @include media(w768) {
                 align-items: center;
             }
         }
 
         @include media(w1024) {
             flex-direction: column;
+        }
+    }
+
+    &__block-about-mobile {
+
+        display: none;
+
+        @include media(w1024) {
+            display: block;
+        }
+
+        @include media(w768) {
+            margin-bottom: 20px;
         }
     }
 
@@ -79,7 +107,7 @@
                 margin-bottom: 20px;
             }
 
-            @include media(w600) {
+            @include media(w768) {
                 margin-bottom: 15px;
             }
         }
@@ -98,6 +126,21 @@
     &__social {
         display: flex;
         align-items: center;
+
+        &_mobile {
+            display: none;
+
+            @include media(w1024) {
+                display: flex;
+            }
+        }
+
+        &_pc {
+
+            @include media(w1024) {
+                display: none;
+            }
+        }
 
         @include media(w768) {
             margin-bottom: 15px;
@@ -131,10 +174,6 @@
         @include media(w1024) {
             font-size: 26px;
             margin-right: 0;
-        }
-
-        @include media(w600) {
-            //padding-left: 0;
         }
     }
 }
