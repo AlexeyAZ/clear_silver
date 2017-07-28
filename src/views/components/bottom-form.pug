@@ -1,6 +1,6 @@
 div#bottomFormContainer.bottom-form-container
     p.text.text_l.mb2.color-white.
-        Проверьте ваш город: возможно, мы уже ведём переговоры по открытию с другим кандидатом
+        Проверьте ваш город на возможность открытия бизнеса по франшизе
     form(data-next="#bigForm")#bottomForm.bottom-form
         label.bottom-form__label
             input(type="text" name="city" placeholder="Ваш город" required).input.input_city
@@ -10,3 +10,8 @@ div#bottomFormContainer.bottom-form-container
             input(type="email" name="email" placeholder="E-mail" required).input.input_mail
         button.btn-round.bottom-form__btn.
             Проверить город
+        div.form__security.form__security_light
+            label
+                input(type="checkbox" checked required)
+                span.form__security-text.
+                    Нажимая кнопку "Проверить город презентацию", я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a>

@@ -2489,6 +2489,8 @@ a.btn-round {
   text-decoration: none;
   padding: 0 35px;
   height: 80px; }
+  .btn-round:hover {
+    background-image: linear-gradient(to bottom, #00a3f5, #007cbb); }
   @media only screen and (max-width: 1024px) {
     .btn-round {
       border-radius: 32px;
@@ -2510,7 +2512,7 @@ a.btn-round {
   .btn-round_download {
     position: relative; }
     .btn-round_download:after {
-      content: "PDF, 20Mb";
+      content: "PDF, 6Mb";
       color: black;
       font-size: 25px;
       position: absolute;
@@ -2680,7 +2682,7 @@ a.btn-round {
         transform: rotate(-45deg); }
 
 .form__heading {
-  font-size: 42px;
+  font-size: 34px;
   font-weight: bold;
   margin-bottom: 20px; }
   @media screen and (max-width: 768px) {
@@ -2738,7 +2740,7 @@ a.btn-round {
   .form__btn_size:after {
     -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-    content: "PDF, 13 Mb";
+    content: "PDF, 6 Mb";
     color: #a6a6a6;
     font-family: "PTSans", sans-serif;
     font-size: 18px;
@@ -2751,6 +2753,17 @@ a.btn-round {
         content: none;
         font-size: 16px;
         left: calc(100% + 20px); } }
+
+.form__security {
+  padding-top: 20px;
+  color: black; }
+  .form__security_light {
+    color: white; }
+    .form__security_light .form__security-link {
+      color: white; }
+
+.form__security-link {
+  color: black; }
 
 .phone {
   background-position: left center;
@@ -2872,8 +2885,8 @@ a {
 .bottom-form {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   -ms-flex-pack: center;
       justify-content: center;
   padding-bottom: 80px;
@@ -2898,12 +2911,16 @@ a {
       .bottom-form__label {
         width: 100%; } }
   .bottom-form__btn {
-    -ms-transform: translateY(50%);
-        transform: translateY(50%);
+    -ms-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
     position: absolute;
+    left: 50%;
     bottom: 0; }
     @media only screen and (max-width: 768px) {
       .bottom-form__btn {
+        -ms-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+        left: 0;
         width: 100%; } }
 
 .header {
@@ -3187,6 +3204,12 @@ a {
       .sec1__decor-text {
         font-size: 25px;
         position: static; } }
+  .sec1__btn {
+    background-image: linear-gradient(to top, #d6d600, yellow);
+    border: none;
+    color: black; }
+    .sec1__btn:hover {
+      background-image: linear-gradient(to top, #cccc00, #f5f500); }
 
 .sec2 {
   overflow: hidden; }
@@ -3313,7 +3336,20 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    position: relative; }
+    .sec3__list:after {
+      content: "";
+      background-image: url("../img/sec3-shadow.png");
+      background-size: 100%;
+      background-position: 0 10px;
+      background-repeat: no-repeat;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      height: 29px;
+      width: 100%; }
     @media only screen and (max-width: 1024px) {
       .sec3__list {
         margin: 0 auto 40px; } }
@@ -3359,6 +3395,8 @@ a {
       .sec3__list-item {
         background-image: none !important;
         width: 100%; } }
+    .sec3__list-item p {
+      width: 100%; }
   .sec3__list-img {
     display: none; }
     @media only screen and (max-width: 768px) {
@@ -3515,10 +3553,21 @@ a {
     padding-top: 20px; }
   .sec4__form {
     background-color: white;
-    box-shadow: 0 0 10px black;
     padding: 60px 60px 60px 30%;
     position: relative;
     z-index: 2; }
+    .sec4__form:after {
+      content: "";
+      background-image: url("../img/sec4-shadow.png");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      top: 99%;
+      left: 0;
+      height: 28px;
+      width: 100%; }
     @media only screen and (max-width: 1024px) {
       .sec4__form {
         text-align: center;

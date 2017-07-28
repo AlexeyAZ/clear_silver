@@ -2,13 +2,18 @@ div.form-wrap.form-wrap_small
     div#smallFormContainer.form-container
         div.form__close
         p.form__heading.
-            Оставьте заявку на презентацию франшизы
+            Заполните форму и скачайте презентацию франшизы
         form#smallForm.form(data-next="#bigForm")
             input(type="text" name="name" placeholder="Ваше имя" required="").form__input
             input(type="text" name="phone" placeholder="Ваш телефон" required="").form__input
             input(type="email" name="email" placeholder="Ваш email" required="").form__input
             button.btn-round.form__btn.form__btn_size.js-big-btn.
                 Скачать
+            div.form__security
+                label
+                    input(type="checkbox" checked required)
+                    span.form__security-text.
+                        Нажимая кнопку "Скачать", я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a>
 div.form-wrap.form-wrap_big
     div#bigFormContainer.form-container
         div.form__close

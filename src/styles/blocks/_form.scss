@@ -85,7 +85,7 @@ $form-input-padding: 25px;
     }
 
     &__heading {
-        font-size: 42px;
+        font-size: 34px;
         font-weight: bold;
         margin-bottom: 20px;
 
@@ -151,7 +151,7 @@ $form-input-padding: 25px;
 
             &:after {
                 transform: translateY(-50%);
-                content: "PDF, 13 Mb";
+                content: "PDF, 6 Mb";
                 color: #a6a6a6;
                 font-family: "PTSans", sans-serif;
                 font-size: 18px;
@@ -167,5 +167,22 @@ $form-input-padding: 25px;
                 }
             }
         }
+    }
+
+    &__security {
+        padding-top: 20px;
+        color: black;
+
+        &_light {
+            color: white;
+
+            .form__security-link {
+                color: white;
+            }
+        }
+    }
+
+    &__security-link {
+        color: black;
     }
 }

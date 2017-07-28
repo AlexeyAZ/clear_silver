@@ -30,7 +30,7 @@ a {
     height: 80px;
 
     &:hover {
-        //animation: btnAnimRed 0.8s 0s ease-out 1;
+        background-image: linear-gradient(to bottom, darken(#00aaff, 2%), darken(#0083c5, 2%));
     }
 
     @include media (w1024) {
@@ -61,7 +61,7 @@ a {
         position: relative;
 
         &:after {
-            content: "PDF, 20Mb";
+            content: "PDF, 6Mb";
             color: black;
             font-size: 25px;
             position: absolute;

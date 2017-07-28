@@ -138,4 +138,14 @@
             position: static;
         }
     }
+
+    &__btn {
+        background-image: linear-gradient(to top, darken(yellow, 8%), yellow);
+        border: none;
+        color: black;
+
+        &:hover {
+            background-image: linear-gradient(to top, darken(yellow, 10%), darken(yellow, 2%));
+        }
+    }
 }
